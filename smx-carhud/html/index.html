@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeakMaster CarHud</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a3059c425a.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</head>
+
+<html>
+   <style>
+    @font-face {
+        font-family: "digital";
+        src: url("fonts/digital.ttf") format("opentype");
+    }
+   </style> 
+<body>
+
+    <div class="carhud" style="position: relative; top: 750px; left: 450px; overflow: hidden; opacity: 0;">
+
+        <svg height="500" width="200" style=" position: relative; transform: rotate(45deg); overflow: hidden; left: -5px;">
+            <defs>
+                <mask id="mask">
+            <circle cx="220" cy="220" r="20%" stroke="green" stroke-width="12" fill="none" stroke-dasharray="4" stroke-dashoffset="501" stroke-mitterlimit="0" 
+                style="position:relative; 
+                    top: 10%; 
+                    left: 50%;
+                    transform: translate(-10%,-45%);
+                    position: absolute;
+                    overflow: hidden;
+                    filter: brightness(500%);"
+            />
+        </mask>
+        </defs>
+        </svg> 
+
+        <svg height="500" width="200" style="transform: rotate(45deg); margin-left: -205px;" mask="url(#mask)">
+            <circle class="speed" cx="220" cy="220" r="20%" stroke="green" stroke-width="12" fill="none" stroke-dasharray="4" stroke-dashoffset="501" stroke-mitterlimit="0" 
+                style="position:relative; 
+                    top: 10%; 
+                    left: -50%;
+                    transform: translate(-10%,-45%);
+                    position: absolute;
+                    overflow: hidden;
+                    filter: brightness(500%);"
+            />
+        </svg> 
+
+        <svg height="500" width="200" style="position: relative; left:350px; top: -215px; transform: rotate(225deg); overflow: hidden;">
+            <defs>
+                <mask id="mask2">
+            <circle cx="220" cy="220" r="20%" stroke="green" stroke-height="1" stroke-width="12" fill="none" stroke-dasharray="4" stroke-dashoffset="501" stroke-mitterlimit="0" 
+                style="position:relative; 
+                    top: 10%; 
+                    left: 50%;
+                    transform: translate(-10%,-45%);
+                    position: absolute;
+                    overflow: hidden;
+                    filter: brightness(500%);"
+            />
+            </mask>
+        </defs>
+        </svg> 
+
+        <svg height="500" width="200" style="position: relative; left:350px; top: -215px; transform: rotate(225deg); overflow: hidden; margin-left: -205px;" mask="url(#mask)">
+            <circle class="rpm" cx="220" cy="220" r="20%" stroke="green" stroke-height="1" stroke-width="12" fill="none" stroke-dasharray="4" stroke-dashoffset="501" stroke-mitterlimit="0" 
+                style="position:relative; 
+                    top: 10%; 
+                    left: 50%;
+                    transform: translate(-10%,-45%);
+                    position: absolute;
+                    overflow: hidden;
+                    filter: brightness(500%);"
+            />
+        </svg> 
+
+        <div class="square" style="position: relative;
+                            width: 140px;
+                            height: 70px;
+                            background-color: rgba(59, 59, 59, 0.37);
+                            top: -400px;
+                            left: 308px;
+                            overflow: hidden;"
+        >
+
+        </div>
+        <div class="km" style="position: relative;
+                            top: -670px;
+                            left: 285px;
+                            font-size: 85px;
+                            font-family: digital;
+                            overflow: hidden;"
+
+        >000
+
+        </div>
+
+        <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+                    position: absolute; 
+                    margin-top: -400px; 
+                    margin-left: 358px;
+                    overflow: hidden;
+                    color: white;"
+        >KM/H
+
+        </div>
+
+        <div>
+            <svg height="500" width="200" style="transform: rotate(45deg); margin-left: -160px; margin-top: -100%; position: relative; top: -89px; left: -6px;" mask="url(#mask)">
+                <circle cx="220" cy="220" r="20%" stroke="gray" stroke-width="12" fill="none" stroke-dasharray="4" stroke-dashoffset="501" stroke-mitterlimit="0" 
+                    style="position:relative; 
+                        top: -20%; 
+                        left: -50%;
+                        transform: translate(-10%,-45%);
+                        position: absolute;
+                        overflow: hidden;
+                        opacity: 0.2;"
+                />
+            </svg> 
+        </div>
+
+        <div>
+            <svg height="500" width="200" style="position: relative; left:492px; top: -321px; transform: rotate(225deg); overflow: hidden; margin-left: -105px; margin-top: -100%;" mask="url(#mask)">
+                <circle cx="220" cy="220" r="20%" stroke="gray" stroke-height="1" stroke-width="12" fill="none" stroke-dasharray="4" stroke-dashoffset="501" stroke-mitterlimit="0" 
+                    style="position:relative; 
+                        top: 10%; 
+                        left: 50%;
+                        transform: translate(-10%,-45%);
+                        position: absolute;
+                        overflow: hidden;
+                        opacity: 0.2;"
+                />
+            </svg> 
+        </div>
+    </div>
+</body>
+</html>
